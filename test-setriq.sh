@@ -12,7 +12,7 @@ then
     exit 1
 fi
 
-PY_VER="$(python3 --version | sed -E 's/Python 3\.([0-9]+)\.[0-9]/\1/g')"
+PY_VER="$(python3 --version | sed -E 's/Python 3\.([0-9]+)\.[0-9]+/\1/g')"
 if [[ $PY_VER -lt 7 ]]
 then
    echo "python version too old. Please install at least Python3.7" 
